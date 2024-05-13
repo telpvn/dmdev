@@ -13,8 +13,8 @@ public class Computer {
         ram = 999;
     }
 
-    Computer(int newSsd, int newRam) {
-        ssd = newSsd;
+    Computer(int ssd, int newRam) {
+        this.ssd = ssd;
         ram = newRam;
     }
 
