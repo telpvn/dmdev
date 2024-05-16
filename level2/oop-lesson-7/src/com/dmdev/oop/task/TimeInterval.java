@@ -1,6 +1,10 @@
 package com.dmdev.oop.task;
 
 public class TimeInterval {
+
+    public static final int SECOND_IN_MILLIS = 60;
+    public static final int MINUTES_IN_HOUR = 60;
+
     private int seconds;
     private int minutes;
     private int hours;
@@ -18,7 +22,7 @@ public class TimeInterval {
     }
 
     public int totalSeconds() {
-        return seconds + minutes * 60 + hours * 60 * 60;
+        return seconds + minutes * SECOND_IN_MILLIS + hours * SECOND_IN_MILLIS * MINUTES_IN_HOUR;
     }
 
     public TimeInterval sum(TimeInterval second) {
