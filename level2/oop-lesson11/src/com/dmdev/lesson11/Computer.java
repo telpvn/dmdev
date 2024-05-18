@@ -9,6 +9,10 @@ public class Computer {
         this.ram = ram;
     }
 
+    public Computer() {
+
+    }
+
     public void load() {
         System.out.println("Я загрузился");
     }
