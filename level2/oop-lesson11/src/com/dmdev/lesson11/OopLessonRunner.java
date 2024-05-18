@@ -6,6 +6,9 @@ public class OopLessonRunner {
         Ram ram = new Ram(500);
         Computer computer = new Computer(ssd, ram);
         computer.load();
-        double sin = Math.sin(2.5);
+
+        Laptop laptop = new Laptop(new Ssd(250), new Ram(512), 2);
+        laptop.open();
+        laptop.load();
     }
 }
