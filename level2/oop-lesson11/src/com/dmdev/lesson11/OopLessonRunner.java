@@ -10,7 +10,6 @@ public class OopLessonRunner {
         Laptop laptop = new Laptop(new Ssd(250), new Ram(512), 2);
         laptop.open();
         laptop.load();
-//        Class<? extends Laptop> aClass = laptop.getClass();
         System.out.println(laptop);
     }
 }
