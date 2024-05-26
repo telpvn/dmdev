@@ -2,14 +2,25 @@ package com.dmdev.lesson11;
 
 public class OopLessonRunner {
     public static void main(String[] args) {
-        Ssd ssd = new Ssd(1024);
-        Ram ram = new Ram(500);
-//        Computer computer = new Computer(ssd, ram);
-//        computer.load();
+        Computer laptop = new Laptop(new Ssd(250), new Ram(1024), 2);
 
-        Laptop laptop = new Laptop(new Ssd(250), new Ram(512), 2);
-        laptop.open();
-        laptop.load();
-        System.out.println(laptop);
+        Computer mobile = new Mobile(new Ssd(125), new Ram(512));
+
+        loadComputers(laptop, mobile);
+        printInformation(new Computer[]{laptop, mobile});
+    }
+
+    public static void printInformation(Computer[] computers) {
+        for (Computer computer : computers) {
+            computer.print();
+            System.out.println();
+        }
+    }
+
+    public static void loadComputers(Computer... computers) {
+        for (Computer computer : computers) {
+            computer.load();
+            System.out.println();
+        }
     }
 }
