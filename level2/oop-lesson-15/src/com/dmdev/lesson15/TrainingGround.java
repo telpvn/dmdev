@@ -1,5 +1,7 @@
 package com.dmdev.lesson15;
 
+import static com.dmdev.lesson15.Archer.*;
+
 public class TrainingGround {
 
     public static void main(String[] args) {
@@ -7,7 +9,7 @@ public class TrainingGround {
         Hero mage = new Mage("Гэндольф", 20);
         Archer archer = new Archer("Леголас", 10);
 
-        archer.new Wolf("Second wolf", 11);
+        Wolf wolf =  new Wolf("Second wolf", 11);
 
         Enemy enemy = new Enemy("Зомби", 100);
 
