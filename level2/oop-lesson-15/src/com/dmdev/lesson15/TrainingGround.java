@@ -9,7 +9,7 @@ public class TrainingGround {
         Hero mage = new Mage("Гэндольф", 20);
         Archer archer = new Archer("Леголас", 10);
 
-        Wolf wolf =  new Wolf("Second wolf", 11);
+//        Wolf wolf =  new Wolf("Second wolf", 11);
 
         Enemy enemy = new Enemy("Зомби", 100);
 

@@ -11,19 +11,11 @@ public class Archer extends Hero {
 
     @Override
     public void attackEnemy(Enemy enemy) {
-
-//        class Test {
-//
-//        }
-//
-//        Test test = new Test();
-//        test.
-
         System.out.println(getName() + " стрельнул из лука в " + enemy.getName());
         wolf.attackEnemy(enemy);
     }
 
-    public static class Wolf {
+    public class Wolf {
 
         private String name;
         private int damage;
