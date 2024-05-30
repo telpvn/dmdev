@@ -12,5 +12,8 @@ public class EnumRunner {
         System.out.println(processorType.valueOf("BIT_32"));
         System.out.println(Arrays.toString(processorType.values()));
         System.out.println(processorType.BIT_32.ordinal());
+        System.out.println(processorType.BIT_64.name());
+        System.out.println(processorType.getName());
+
     }
 }
