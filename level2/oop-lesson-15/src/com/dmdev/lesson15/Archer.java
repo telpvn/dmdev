@@ -15,7 +15,7 @@ public class Archer extends Hero {
         wolf.attackEnemy(enemy);
     }
 
-    private class Wolf {
+    public class Wolf {
 
         private String name;
         private int damage;
