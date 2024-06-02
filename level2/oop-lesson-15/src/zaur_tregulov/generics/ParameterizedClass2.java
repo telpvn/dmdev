@@ -6,7 +6,7 @@ public class ParameterizedClass2 {
         System.out.println("Znacheniya pari: value1 = " + pair1.getFirstValue() + ", value2 = " + pair1.getSecondValue());
 
         Pair<Integer, Double> pair2 = new Pair<>(156, 3.14);
-        System.out.println("Znacheniya pari: value1 = " + pair2.getFirstValue() + ", value2 = " + pair1.getSecondValue());
+        System.out.println("Znacheniya pari: value1 = " + pair2.getFirstValue() + ", value2 = " + pair2.getSecondValue());
     }
 }
 
