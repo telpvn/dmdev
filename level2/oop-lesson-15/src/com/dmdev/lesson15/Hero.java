@@ -1,6 +1,8 @@
 package com.dmdev.lesson15;
 
-public abstract class Hero<T> {
+import com.dmdev.lesson18.weapon.Weapon;
+
+public abstract class Hero<T extends Weapon> {
 
     private String name;
     private int damage;
