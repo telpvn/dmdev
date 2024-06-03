@@ -17,11 +17,14 @@ public class WeaponRunner {
         Warrior<Sword> warrior = new Warrior<>("Боромир", 10);
         warrior.setWeapon(new Sword());
 
-//        printWeaponDamage(warrior);
+        printWeaponDamage(warrior);
     }
 
-    public static void printWeaponDamage(Hero<? super MeleeWeapon> hero) {
+    public static void printWeaponDamage(Hero<Sword> hero) {
+        Sword weapon = hero.getWeapon();
+        hero.setWeapon(new Sword());
         System.out.println(hero.getWeapon().getDamage());
     }
+
     // Object -> Weapon -> MeleeWeapon -> Sword (писал Антон
 }
