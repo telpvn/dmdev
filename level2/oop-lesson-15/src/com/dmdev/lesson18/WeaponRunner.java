@@ -23,5 +23,5 @@ public class WeaponRunner {
     public static void printWeaponDamage(Hero<? super MeleeWeapon> hero) {
         System.out.println(hero.getWeapon().getDamage());
     }
-    // Object -> Weapon -> MeleeWeapon -> Sword
+    // Object -> Weapon -> MeleeWeapon -> Sword (писал Антон
 }
