@@ -20,9 +20,8 @@ public class WeaponRunner {
         printWeaponDamage(warrior);
     }
 
-    public static void printWeaponDamage(Hero<Sword> hero) {
-        Sword weapon = hero.getWeapon();
-        hero.setWeapon(new Sword());
+    public static void printWeaponDamage(Hero<? extends Weapon> hero) {
+
         System.out.println(hero.getWeapon().getDamage());
     }
 
