@@ -15,12 +15,21 @@ public class ParameterizedClass {
 //        Double d1 = info21.getValue();
 
 //        Info<Bus> info3 = new Info<>(new Bus());
-//        System.out.println(info3);
 //        Bus b1 = info3.getValue();
     }
+
+//    public void abc(Info<String> info) {
+//        String s = info.getValue();
+//    }
+//
+//    public void abc(Info<Integer> info) {
+//        Integer i = info.getValue();
+//    }
+
+//    abc(Info info)
 }
 
-class Info<T extends Number & I1 & I2> {
+class Info<T> {
     private T value;
 
     public Info(T value) {
@@ -36,8 +45,13 @@ class Info<T extends Number & I1 & I2> {
     }
 }
 
-interface I1 {
+class Parent {
+    public void abc(Info<String> info) {
+        String s = info.getValue();
+    }
 }
 
-interface I2 {
-}
+//class Child extends Parent {
+//    public void abc(Info<Integer> info) {
+//        Integer i = info.getValue();
+//    }
