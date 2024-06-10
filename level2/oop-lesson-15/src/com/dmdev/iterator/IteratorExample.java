@@ -13,10 +13,14 @@ public class IteratorExample {
 //            Integer integer = list.get(i);
 //        }
 
-//        for (Integer integer : list) {
-//            System.out.println(integer);
-//        }
+        for (Integer integer : list) {
+            System.out.println(integer);
+        }
 
+        for (Integer integer : list) {
+            System.out.println(integer);
+        }
 
+        list.forEach(System.out::println);
     }
 }

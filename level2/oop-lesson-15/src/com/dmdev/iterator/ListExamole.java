@@ -11,9 +11,10 @@ public class ListExamole {
         list.add("string3");
         list.add("string4");
 
-        for (String value : list) {
-            System.out.println(value);
-        }
-    }
+//        for (String value : list) {
+//            System.out.println(value);
+//        }
 
+        list.iterator().forEachRemaining(System.out::println);
+    }
 }
