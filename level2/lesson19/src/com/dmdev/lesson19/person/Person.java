@@ -1,5 +1,7 @@
 package com.dmdev.lesson19.person;
 
+import java.util.Objects;
+
 public class Person {
 
     private int id;
@@ -22,7 +24,18 @@ public class Person {
         this.id = id;
         this.lastName = lastName;
         this.firstName = firstName;
+    }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return id == person.id && Objects.equals(firstName, person.firstName) && Objects.equals(lastName, person.lastName);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, firstName, lastName);
     }
 }
