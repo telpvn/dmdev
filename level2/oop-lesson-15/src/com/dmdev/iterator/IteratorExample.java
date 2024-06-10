@@ -17,20 +17,6 @@ public class IteratorExample {
 //            System.out.println(integer);
 //        }
 
-        for (Iterator<Integer> iterator = list.iterator(); iterator.hasNext();) {
-            Integer next = iterator.next();
-            if (next == 3 || next == 4) {
-                iterator.remove();
-            }
-        }
 
-        System.out.println(list);
-
-//        Iterator<Integer> iterator = list.iterator();
-//        while (iterator.hasNext()) {
-//            Integer next = iterator.next();
-//            System.out.println(next);
-//        }
     }
-
 }
