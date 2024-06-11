@@ -20,10 +20,10 @@ public class Person {
         return lastName;
     }
 
-    public Person(int id, String lastName, String firstName) {
+    public Person(int id, String firstName, String lastName) {
         this.id = id;
-        this.lastName = lastName;
         this.firstName = firstName;
+        this.lastName = firstName;
     }
 
     @Override
@@ -42,9 +42,9 @@ public class Person {
     @Override
     public String toString() {
         return "Person{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
+                "id = " + id +
+                ", firstName = '" + firstName + '\'' +
+                ", lastName = '" + lastName + '\'' +
                 '}';
     }
 }

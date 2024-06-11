@@ -15,6 +15,16 @@ public class MapExample {
         map.put(ivan.getId(), ivan);
         map.put(petr.getId(), petr);
 
-        System.out.println(map.get(2));
+//        System.out.println(map.keySet());
+//        System.out.println(map.values());
+//        System.out.println(map.entrySet());
+//
+//        for (Person person : map.values()) {
+//            System.out.println(person.getFirstName());
+//        }
+
+        for (Map.Entry<Integer, Person> entry : map.entrySet()) {
+            System.out.println(entry.getKey() + " " + entry.getValue());
+        }
     }
 }
