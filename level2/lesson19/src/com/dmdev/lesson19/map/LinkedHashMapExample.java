@@ -3,6 +3,7 @@ package com.dmdev.lesson19.map;
 import com.dmdev.lesson19.person.Person;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class LinkedHashMapExample {
@@ -12,7 +13,7 @@ public class LinkedHashMapExample {
         Person petr = new Person(29, "Petr", "Petrov");
         Person sveta = new Person(3, "Sveta", "Svetikova");
 
-        Map<Integer, Person> map = new HashMap<>();
+        Map<Integer, Person> map = new LinkedHashMap<>();
         map.put(ivan.getId(), ivan);
         map.put(petr.getId(), petr);
         map.putIfAbsent(sveta.getId(), sveta);
