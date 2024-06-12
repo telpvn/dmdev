@@ -4,6 +4,7 @@ import com.dmdev.lesson19.person.Person;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class TreeMapExample {
 
@@ -15,7 +16,7 @@ public class TreeMapExample {
         Person sveta2 = new Person(45, "Sveta2", "Svetikova2");
         Person sveta3 = new Person(10, "Sveta3", "Svetikova3");
 
-        Map<Integer, Person> map = new HashMap<>();
+        Map<Integer, Person> map = new TreeMap<>();
         map.put(ivan.getId(), ivan);
         map.put(petr.getId(), petr);
         map.putIfAbsent(sveta.getId(), sveta);
