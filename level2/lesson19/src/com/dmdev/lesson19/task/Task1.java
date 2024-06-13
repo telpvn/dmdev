@@ -18,19 +18,13 @@ public class Task1 {
     }
 
     private static List<Integer> removeEven(List<Integer> list) {
+        List<Integer> result = new ArrayList<>();
         for (Integer value : list) {
-            if (value % 2 == 0) {
-                list.remove(value);
+            if (value % 2 != 0) {
+                result.add(value);
             }
         }
-        return list;
+        return result;
     }
 }
 
-/*D:\git\dmdev\level2\lesson19\out\production\lesson19 com.dmdev.lesson19.task.Task1
-Exception in thread "main" java.util.ConcurrentModificationException
-	at java.base/java.util.ArrayList$Itr.checkForComodification(ArrayList.java:1013)
-	at java.base/java.util.ArrayList$Itr.next(ArrayList.java:967)
-	at com.dmdev.lesson19.task.Task1.removeEven(Task1.java:21)
-	at com.dmdev.lesson19.task.Task1.main(Task1.java:16)
-*/
