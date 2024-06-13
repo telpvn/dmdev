@@ -21,7 +21,6 @@ public class Task2 {
     }
 
     private static int countUnique (List<Integer> list) {
-        Set<Integer> integers = new HashSet<>(list);
-        return integers.size();
+        return new HashSet<>(list).size();
     }
 }
