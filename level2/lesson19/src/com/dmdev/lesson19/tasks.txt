@@ -24,3 +24,10 @@ Hal=Perkins}
 Значение: значение множителя
 Вывести результирующий многочлен в виде строки: ax^6 + bx^4 +
 cx^3 + dx + 8
+
+D:\git\dmdev\level2\lesson19\out\production\lesson19 com.dmdev.lesson19.task.Task1
+Exception in thread "main" java.lang.UnsupportedOperationException
+	at java.base/java.util.ImmutableCollections.uoe(ImmutableCollections.java:142)
+	at java.base/java.util.ImmutableCollections$AbstractImmutableCollection.remove(ImmutableCollections.java:150)
+	at com.dmdev.lesson19.task.Task1.removeEven(Task1.java:21)
+	at com.dmdev.lesson19.task.Task1.main(Task1.java:14)
