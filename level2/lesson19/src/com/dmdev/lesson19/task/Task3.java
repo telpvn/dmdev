@@ -29,7 +29,7 @@ public class Task3 {
                 "Marty", "Stepp",
                 "Stuart", "Reges",
                 "Jessica", "Miller",
-                "Amanda", "Camp",
+                "Amanda", "Reges",
                 "Hal", "Perkins"
         );
         System.out.println(isUnique(map));
