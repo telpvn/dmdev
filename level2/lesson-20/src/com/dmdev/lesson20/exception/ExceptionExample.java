@@ -1,6 +1,7 @@
 package com.dmdev.lesson20.exception;
 
 import java.io.FileNotFoundException;
+import java.util.concurrent.TimeoutException;
 
 public class ExceptionExample {
 
@@ -8,7 +9,7 @@ public class ExceptionExample {
         System.out.println("main start");
         try {
             unsafe(10);
-        } catch (FileNotFoundException exception) {
+        } catch (FileNotFoundException | TimeoutException exception) {
 //            handle exception
             exception.printStackTrace();
         }
@@ -16,7 +17,7 @@ public class ExceptionExample {
 //        code
     }
 
-    public static void unsafe(int value) throws FileNotFoundException {
+    public static void unsafe(int value) throws FileNotFoundException, TimeoutException {
         System.out.println("unsafe start");
         if (value > 0) {
             throw new FileNotFoundException();
