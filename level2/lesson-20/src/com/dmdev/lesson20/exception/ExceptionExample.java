@@ -14,6 +14,8 @@ public class ExceptionExample {
             exception.printStackTrace();
         } catch (Exception exception) {
             exception.printStackTrace();
+        } finally {
+            System.out.println("finally");
         }
         System.out.println("main code");
 //        code
