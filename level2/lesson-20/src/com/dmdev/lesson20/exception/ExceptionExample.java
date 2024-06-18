@@ -9,8 +9,10 @@ public class ExceptionExample {
         System.out.println("main start");
         try {
             unsafe(10);
-        } catch (FileNotFoundException | TimeoutException exception) {
-//            handle exception
+        } catch (TimeoutException exception) {
+//            handle exceptionTimeoutException
+            exception.printStackTrace();
+        } catch (Exception exception) {
             exception.printStackTrace();
         }
         System.out.println("main code");
