@@ -13,8 +13,7 @@ public class ExceptionExample {
         } catch (RuntimeException exception) {
             System.out.println("catch");
             exception.printStackTrace();
-        }
-        finally {
+        } finally {
             System.out.println("finally");
         }
         System.out.println("main end");
