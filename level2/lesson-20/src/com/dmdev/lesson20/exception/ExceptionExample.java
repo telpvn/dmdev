@@ -9,11 +9,15 @@ public class ExceptionExample {
         System.out.println("main start");
         try {
             System.out.println(finallyTest());
-            unsafe(-10);
-        } finally {
+            unsafe(10);
+        } catch (RuntimeException exception) {
+            System.out.println("catch");
+            exception.printStackTrace();
+        }
+        finally {
             System.out.println("finally");
         }
-        System.out.println("main code");
+        System.out.println("main end");
 //        code
     }
 
@@ -27,10 +31,10 @@ public class ExceptionExample {
         }
     }
 
-    public static void unsafe(int value) throws FileNotFoundException, TimeoutException {
+    public static void unsafe(int value) {
         System.out.println("unsafe start");
         if (value > 0) {
-            throw new FileNotFoundException();
+            throw new RuntimeException();
         }
         System.out.println("unsafe end");
 //        code
