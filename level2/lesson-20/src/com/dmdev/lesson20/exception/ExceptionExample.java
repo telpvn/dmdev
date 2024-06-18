@@ -5,15 +5,10 @@ import java.util.concurrent.TimeoutException;
 
 public class ExceptionExample {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException, TimeoutException {
         System.out.println("main start");
         try {
-            unsafe(10);
-        } catch (TimeoutException exception) {
-//            handle exceptionTimeoutException
-            exception.printStackTrace();
-        } catch (Exception exception) {
-            exception.printStackTrace();
+            unsafe(-10);
         } finally {
             System.out.println("finally");
         }
