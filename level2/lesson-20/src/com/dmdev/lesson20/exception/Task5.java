@@ -12,6 +12,7 @@ public class Task5 {
             catchCustomException();
         } catch (DmdevException exception) {
             System.out.println("catched in main");
+            exception.printStackTrace();
         }
     }
 
