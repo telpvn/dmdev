@@ -19,7 +19,7 @@ public class Task3 {
         }
     }
 
-    public static void unsafe() throws DmdevException {
+    public static void unsafe() {
         throw new DmdevException(new RuntimeException("runtime exception "));
     }
 }

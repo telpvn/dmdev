@@ -1,6 +1,6 @@
 package com.dmdev.lesson20.exception;
 
-public class DmdevException extends Exception {
+public class DmdevException extends RuntimeException {
 
     public DmdevException(String message) {
         super(message);
