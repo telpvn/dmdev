@@ -23,8 +23,18 @@ public class Task6 {
         Random random = new Random();
         try {
             unsafe(random.nextInt(3));
-        } catch (Throwable throwable) {
+        } catch (IndexOutOfBoundsException throwable) {
+            System.out.println("1");
             throwable.printStackTrace();
+        } catch (FileNotFoundException exception) {
+            System.out.println("2");
+            exception.printStackTrace();
+        } catch (RuntimeException exception) {
+            System.out.println("3");
+            exception.printStackTrace();
+        } catch (Throwable exception) {
+            System.out.println("4");
+            exception.printStackTrace();
         }
     }
 
