@@ -11,7 +11,7 @@ public class StreamExample {
                 .map(Integer::valueOf)
                 .filter(value -> value % 2 == 0)
                 .sorted()
-                .skip(1)
+//                .skip(1)
                 .limit(2)
                 .forEach(System.out::println);
 
