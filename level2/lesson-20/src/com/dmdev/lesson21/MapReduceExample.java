@@ -26,7 +26,9 @@ public class MapReduceExample {
                 .sequential()
 //                .map(Student::getAge)
                 .reduce(((student1, student2) -> student1.getAge() > student2.getAge() ? student1 : student2));
-        maybeStudent.ifPresent(System.out::println);
+        maybeStudent.map(Student::getAge)
+                .flatMap(age -> Optional.of(age * 2))
+                .ifPresent(System.out::println);
 
     }
 }
