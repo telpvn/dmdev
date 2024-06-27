@@ -15,6 +15,7 @@ public class StreamExample {
 //                .skip(1)
                 .limit(2)
                 .mapToInt(Integer::intValue)
+//                .mapToObj(Integer::valueOf)
                 .summaryStatistics();
         System.out.println(intSummaryStatistics);
 
