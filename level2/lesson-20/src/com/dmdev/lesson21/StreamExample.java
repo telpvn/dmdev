@@ -31,12 +31,7 @@ public class StreamExample {
 //        IntStream.range(0, 10)
 //                .forEach(System.out::println);
 
-        IntStream.iterate(0, new IntUnaryOperator() {
-            @Override
-            public int applyAsInt(int operand) {
-                return operand + 3;
-            }
-        })
+        IntStream.iterate(0, operand -> operand + 3)
                 .skip(10)
                 .limit(20)
                 .forEach(System.out::println);
