@@ -2,7 +2,7 @@ package com.dmdev.lesson21;
 
 import java.util.List;
 
-public class StreamExample {
+public class Test {
 
     public static void main(String[] args) {
         List<String> strings = List.of("88", "11", "22", "33", "44", "55", "66");
@@ -13,14 +13,16 @@ public class StreamExample {
                 .sorted()
 //                .skip(1)
                 .limit(2)
-//                .mapToInt(Integer::intValue)
+                .mapToInt(Integer::intValue)
                 .forEach(System.out::println);
+
+
 
 //        for (String string : strings) {
 //            String value = string + string;
 //            Integer intValue = Integer.valueOf(value);
 //            if (intValue % 2 == 0) {
-//                System.out.println(intValue);
+//            System.out.println(intValue);
 //            }
 //        }
     }
