@@ -2,6 +2,7 @@ package com.dmdev.lesson21;
 
 import java.util.IntSummaryStatistics;
 import java.util.List;
+import java.util.function.IntUnaryOperator;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -23,11 +24,21 @@ public class StreamExample {
                 .summaryStatistics();
         System.out.println(intSummaryStatistics);
 
-        Stream.of("88", "11", "22", "33", "44", "55", "66")
-                .peek(System.out::println)
-                .collect(Collectors.toList());
+//        Stream.of("88", "11", "22", "33", "44", "55", "66")
+//                .peek(System.out::println)
+//                .collect(Collectors.toList());
 
-        IntStream.range(0, 10)
+//        IntStream.range(0, 10)
+//                .forEach(System.out::println);
+
+        IntStream.iterate(0, new IntUnaryOperator() {
+            @Override
+            public int applyAsInt(int operand) {
+                return operand + 3;
+            }
+        })
+                .skip(10)
+                .limit(20)
                 .forEach(System.out::println);
 
 //        for (String string : strings) {
