@@ -2,6 +2,10 @@ package com.dmdev.lesson21;
 
 import java.util.IntSummaryStatistics;
 import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class StreamExample {
 
@@ -18,6 +22,13 @@ public class StreamExample {
 //                .mapToObj(Integer::valueOf)
                 .summaryStatistics();
         System.out.println(intSummaryStatistics);
+
+        Stream.of("88", "11", "22", "33", "44", "55", "66")
+                .peek(System.out::println)
+                .collect(Collectors.toList());
+
+        IntStream.range(0, 10)
+                .forEach(System.out::println);
 
 //        for (String string : strings) {
 //            String value = string + string;
