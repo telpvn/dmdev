@@ -1,5 +1,6 @@
 package com.dmdev.lesson21;
 
+import java.util.Optional;
 import java.util.stream.Stream;
 
 public class MapReduceExample {
@@ -13,7 +14,7 @@ public class MapReduceExample {
      */
 
     public static void main(String[] args) {
-        Stream.of(
+        Optional<Student> maybeStudent = Stream.of(
                         new Student(18, "Ivan"),
                         new Student(23, "Petr"),
                         new Student(34, "Vasya"),
@@ -23,8 +24,9 @@ public class MapReduceExample {
                         new Student(101, "Kira")
                 )
                 .sequential()
-                .map(Student::getAge)
-                .reduce(Integer::sum)
-                .ifPresent(System.out::println);
+//                .map(Student::getAge)
+                .reduce(((student1, student2) -> student1.getAge() > student2.getAge() ? student1 : student2));
+        maybeStudent.ifPresent(System.out::println);
+
     }
 }
