@@ -13,7 +13,7 @@ public class StreamExample {
                 .sorted()
 //                .skip(1)
                 .limit(2)
-//                .mapToInt(Integer::intValue)
+                .mapToInt(Integer::intValue)
                 .forEach(System.out::println);
 
 //        for (String string : strings) {
