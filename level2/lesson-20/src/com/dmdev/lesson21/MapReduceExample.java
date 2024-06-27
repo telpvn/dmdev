@@ -27,7 +27,7 @@ public class MapReduceExample {
 //                .map(Student::getAge)
                 .reduce(((student1, student2) -> student1.getAge() > student2.getAge() ? student1 : student2));
         maybeStudent.map(Student::getAge)
-                .flatMap(age -> Optional.ofNullable(null))
+                .map(age -> null)
                 .ifPresent(System.out::println);
 
     }
