@@ -23,7 +23,7 @@ public class MapReduceExample {
                         new Student(101, "Kira")
                 )
                 .map(Student::getAge)
-                .reduce(Math::min)
+                .reduce(Integer::sum)
                 .ifPresent(System.out::println);
     }
 }
