@@ -22,7 +22,7 @@ public class MapReduceExample {
                         new Student(68, "Den"),
                         new Student(101, "Kira")
                 )
-                .parallel()
+                .sequential()
                 .map(Student::getAge)
                 .reduce(Integer::sum)
                 .ifPresent(System.out::println);
