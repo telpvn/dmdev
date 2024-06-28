@@ -27,5 +27,11 @@ public class Task2 {
                 .collect(Collectors.toSet())
                 .size();
         System.out.println(result);
+
+        long result2 = strings.stream()
+                .filter(value -> value.length() > 8)
+                .distinct()
+                .count();
+        System.out.println(result2);
     }
 }
