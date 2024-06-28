@@ -20,7 +20,7 @@ public class Task5 {
                 new Person("Sveta", "Svetikova", 33),
                 new Person("Kate", "Ivanova", 45),
                 new Person("Slava", "Slavikov", 18),
-                new Person("Arni", "Kutuzov", 56)
+                new Person("Arni", "Kutuzov1234", 56)
         );
 
         persons.stream()
