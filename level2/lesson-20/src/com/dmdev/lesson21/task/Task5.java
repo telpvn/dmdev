@@ -2,6 +2,10 @@ package com.dmdev.lesson21.task;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+import static java.util.stream.Collectors.*;
 
 /**
  * 5. Дан класс Person с полями firstName, lastName,
@@ -18,7 +22,7 @@ public class Task5 {
                 new Person("Ivan", "Ivanov", 20),
                 new Person("Petr", "Petrov", 25),
                 new Person("Sveta", "Svetikova", 33),
-                new Person("Kate", "Ivanova", 45),
+                new Person("Kate", "Ivanova", 25),
                 new Person("Slava", "Slavikov", 18),
                 new Person("Arni", "Kutuzov1234", 56)
         );
@@ -28,6 +32,11 @@ public class Task5 {
                 .max(Comparator.comparing(Person::getAge))
                 .map(Person::getFullName)
                 .ifPresent(System.out::println);
+
+        Map<Integer, List<String>> map = persons.stream()
+                .collect(groupingBy(Person::getAge,
+                        mapping(Person::getFullName, toList())));
+        System.out.println(map);
 
     }
 }
