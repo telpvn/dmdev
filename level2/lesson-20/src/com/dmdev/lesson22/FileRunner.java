@@ -11,5 +11,12 @@ public class FileRunner {
         System.out.println(file.exists());
         System.out.println(file.isFile());
         System.out.println(file.isDirectory());
+        System.out.println(file.getName());
+        System.out.println(file.getParent());
+        System.out.println(file.getAbsolutePath());
+
+        File dir = new File("resource/test.dir");
+        dir.mkdirs();
+        dir.list();
     }
 }
